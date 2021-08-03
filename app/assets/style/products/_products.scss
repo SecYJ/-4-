@@ -1,0 +1,281 @@
+.product {
+	&-nav {
+		&-item {
+			flex-basis: 33.33%;
+			position: relative;
+
+			&:not(:last-child) {
+				a {
+					border-right: 1px solid $color-grey-1;
+				}
+			}
+
+			&:not(:first-child) {
+				a {
+					border-left: none;
+				}
+			}
+
+			a {
+				padding: 27px 0;
+				border: 1px solid $color-grey-1;
+				font-size: 32px;
+				line-height: 50px;
+				color: #000;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: all 0.2s;
+				position: relative;
+
+				&::after {
+					content: "";
+					width: 100%;
+					height: 8px;
+					background: transparent;
+					position: absolute;
+					bottom: 0;
+
+					@include mobile() {
+						height: 4px;
+					}
+				}
+
+				@include tablet() {
+					padding: 14px 0;
+					font-size: 24px;
+					line-height: 32px;
+				}
+
+				@include mobile() {
+					padding: 6px 0 8px;
+					font-size: 14px;
+					line-height: 1;
+				}
+
+				&:hover {
+					&::after {
+						background: $color-primary;
+					}
+				}
+
+				img {
+					width: 44px;
+					height: 44px;
+					margin-right: 8px;
+
+					@include tablet() {
+						width: 29.33px;
+						height: 29.33px;
+					}
+
+					@include mobile() {
+						width: 16px;
+						height: 16px;
+						margin-right: 2px;
+					}
+				}
+			}
+
+			.active {
+				&::after {
+					background: $color-primary;
+				}
+			}
+		}
+	}
+}
+
+.product {
+	&-banner {
+		height: 304px;
+		display: flex;
+
+		@include mobile() {
+			height: 148px;
+		}
+
+		&-optical {
+			&-left {
+				background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-1.png);
+			}
+
+			&-right {
+				background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-2.png);
+			}
+		}
+
+		&-sunglasses {
+			&-left {
+				background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-3.png);
+			}
+
+			&-right {
+				background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-2-color.png);
+			}
+		}
+
+		& > * {
+			background-size: cover;
+			background-position: center center;
+			flex-basis: 50%;
+			height: 100%;
+		}
+	}
+
+	&-wrapper {
+		padding-top: 80px;
+		padding-bottom: 96px;
+
+		@include tablet() {
+			padding-top: 56px;
+			padding-bottom: 64px;
+		}
+
+		@include mobile() {
+			padding-top: 32px;
+			padding-bottom: 40px;
+		}
+	}
+
+	&-title {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin-bottom: 40px;
+
+		@include tablet() {
+			margin-bottom: 32px;
+		}
+
+		&-en {
+			font-size: 42px;
+			line-height: 63px;
+
+			@include tablet() {
+				font-size: 32px;
+				line-height: 1.5;
+			}
+		}
+
+		&-cn {
+			font-size: 32px;
+
+			@include tablet() {
+				font-size: 24px;
+			}
+		}
+	}
+
+	&-sunglasses {
+		column-gap: 5%;
+
+		@include tablet() {
+			column-gap: 4%;
+		}
+
+		@include mobile() {
+			column-gap: 0;
+		}
+
+		&-item {
+			flex-basis: 30%;
+
+			@include tablet() {
+				flex-basis: 48%;
+			}
+
+			@include mobile() {
+				flex-basis: 100%;
+			}
+		}
+	}
+
+	&-optical {
+		&-item {
+			flex-basis: 22%;
+
+			@include tablet() {
+				flex-basis: 48%;
+			}
+
+			@include mobile() {
+				flex-basis: 100%;
+			}
+		}
+	}
+
+	&-list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		row-gap: 104px;
+
+		@include tablet() {
+			row-gap: 72px;
+		}
+
+		@include mobile() {
+			gap: 32px;
+		}
+
+		&-img {
+			width: 100%;
+			height: 164px;
+
+			@include mobile() {
+				height: 166px;
+			}
+		}
+
+		&-details {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			font-size: 24px;
+
+			@include tablet() {
+				font-size: 24px;
+				line-height: 1.25;
+			}
+
+			@include mobile() {
+				font-size: 16px;
+				line-height: 1.875;
+			}
+		}
+
+		&-price {
+			font-weight: 500;
+			justify-self: end;
+			color: $color-primary;
+		}
+
+		&-color {
+			display: flex;
+			gap: 8px;
+
+			@include mobile() {
+				gap: 4px;
+			}
+
+			& > * {
+				width: 24px;
+				height: 24px;
+				border-radius: 4px;
+
+				@include mobile() {
+					width: 16px;
+					height: 16px;
+				}
+			}
+
+			&-1 {
+				background-color: #5f3e2d;
+			}
+
+			&-2 {
+				background-color: #b75929;
+			}
+		}
+	}
+}

@@ -1,0 +1,57 @@
+/* color and bg color */
+
+.clr-white {
+	color: #fff;
+}
+
+.clr-primary {
+	color: $color-primary;
+}
+
+.clr-secondary {
+	color: $color-secondary;
+}
+
+.bg-primary {
+	background: $color-primary;
+}
+
+.bg-secondary {
+	background: $color-secondary;
+}
+
+.bg-brown {
+	background: #aa06010d;
+}
+
+/* flex */
+.flex {
+	display: flex;
+}
+
+/* font weight */
+.font-medium {
+	font-weight: 500;
+}
+
+.font-bold {
+	font-weight: 700;
+}
+
+.font-black {
+	font-weight: 900;
+}
+
+/* font-style */
+.italic {
+	font-style: italic;
+}
+
+/* text transform */
+.uppercase {
+	text-transform: uppercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
