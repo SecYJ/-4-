@@ -7,7 +7,10 @@
 @import "typography";
 @import "layout";
 @import "utilities";
-@import "components";
+
+@import "components/pagination";
+@import "components/blog-nav";
+@import "components/page-title";
 
 @import "index";
 

@@ -3,6 +3,7 @@
 		display: flex;
 		justify-content: center;
 		margin-bottom: 160px;
+		white-space: nowrap;
 
 		@include tablet() {
 			margin-bottom: 96px;
