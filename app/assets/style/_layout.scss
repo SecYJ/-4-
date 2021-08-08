@@ -28,6 +28,7 @@
 			color: #fff;
 			font-size: 20px;
 			text-align: center;
+			position: relative;
 
 			@include mobile() {
 				flex-basis: 50%;
@@ -46,6 +47,29 @@
 					margin-left: 0;
 				}
 			}
+
+			@include hover-underline;
+
+			// &::after {
+			// 	content: "";
+			// 	display: block;
+			// 	width: 0;
+			// 	height: 2px;
+			// 	background-color: #fff;
+			// 	position: absolute;
+			// 	bottom: -3px;
+			// 	transition: width 0.15s;
+			// }
+
+			// &:hover {
+			// 	&::after {
+			// 		width: 100%;
+
+			// 		@include mobile() {
+			// 			width: 0;
+			// 		}
+			// 	}
+			// }
 		}
 	}
 }
@@ -67,6 +91,7 @@
 
 	&-nav {
 		margin-bottom: 24px;
+		display: flex;
 
 		@include tablet() {
 			margin-bottom: 18px;
@@ -84,6 +109,12 @@
 					margin-right: 40px;
 				}
 			}
+		}
+
+		& > * {
+			position: relative;
+
+			@include hover-underline;
 		}
 	}
 

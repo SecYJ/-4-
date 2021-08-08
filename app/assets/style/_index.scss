@@ -17,51 +17,46 @@
 			height: 100%;
 			color: $color-secondary;
 			text-align: right;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
 
 			&-1 {
-				font-size: $size-9;
+				font-size: 36px;
 
 				@include tablet() {
-					font-size: $size-5;
+					font-size: 20px;
 				}
 
 				@include mobile() {
-					font-size: $size-4;
+					font-size: 16px;
 					line-height: 1.875;
 				}
 			}
 
 			&-2 {
-				font-size: $size-16;
+				font-size: 64px;
 
 				@include tablet() {
-					font-size: $size-12;
+					font-size: 48px;
 				}
 
 				@include mobile() {
-					font-size: $size-8;
+					font-size: 32px;
 					line-height: 2.25;
 				}
 			}
 		}
 	}
 	&-title {
-		font-size: $size-12;
-		font-weight: 700;
-		text-align: center;
-		margin-bottom: $size-10;
+		font-size: 48px;
+		margin-bottom: 40px;
 
 		@include tablet() {
-			margin-bottom: $size-8;
-			font-size: $size-8;
+			margin-bottom: 32px;
+			font-size: 32px;
 		}
 
 		@include mobile() {
-			font-size: $size-6;
-			margin-bottom: $size-5;
+			font-size: 24px;
+			margin-bottom: 20px;
 			line-height: 2;
 		}
 	}
@@ -70,59 +65,45 @@
 		@include section-padding;
 
 		&-list {
-			display: flex;
-			column-gap: 4%;
-
-			@include tablet() {
-				flex-wrap: wrap;
-				row-gap: $size-8;
-				column-gap: 4%;
-			}
-
 			@include mobile() {
-				column-gap: 0;
-				row-gap: $size-8;
-			}
-		}
-
-		&-item {
-			flex-basis: 22%;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-
-			@include tablet() {
-				flex-basis: 48%;
+				row-gap: 32px;
 			}
 
-			@include mobile() {
-				flex-basis: 100%;
-			}
-
-			img {
-				width: 100px;
-				height: 100px;
-				margin-bottom: $size-4;
-			}
-
-			&-title {
-				font-size: $size-6;
-				font-weight: 700;
-				color: $color-secondary;
-				margin-bottom: $size-2;
+			&-item {
+				flex-basis: 22%;
 
 				@include tablet() {
-					font-size: $size-8;
+					flex-basis: 48%;
 				}
 
 				@include mobile() {
-					font-size: $size-6;
-					line-height: 2;
+					flex-basis: 100%;
 				}
-			}
 
-			&-desc {
-				font-size: $size-4;
+				img {
+					width: 100px;
+					height: 100px;
+					margin-bottom: 16px;
+				}
+
+				&-title {
+					font-size: 24px;
+					color: $color-secondary;
+					margin-bottom: 8px;
+
+					@include tablet() {
+						font-size: 32px;
+					}
+
+					@include mobile() {
+						font-size: 24px;
+						line-height: 2;
+					}
+				}
+
+				&-desc {
+					font-size: 16px;
+				}
 			}
 		}
 	}
@@ -130,66 +111,64 @@
 	&-product {
 		@include section-padding;
 
-		&-item {
-			display: flex;
-			column-gap: 30px;
-			position: relative;
-
-			@include mobile() {
-				flex-direction: column;
-			}
-
-			&:not(:last-child) {
-				margin-bottom: $size-8;
-
-				@include tablet() {
-					margin-bottom: $size-2;
-				}
-			}
-
-			&:nth-child(even) {
-				flex-direction: row-reverse;
-
-				@include tablet() {
-					flex-direction: row;
-				}
-			}
-
-			&-img {
-				width: 635px;
-				height: 320px;
-				object-fit: cover;
-
-				@include tablet() {
-					width: 390px;
-					height: 168px;
-				}
-			}
-
-			&-category {
-				display: flex;
-				align-items: center;
+		&-list {
+			&-item {
+				column-gap: 30px;
+				position: relative;
 
 				@include mobile() {
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
+					flex-direction: column;
 				}
 
-				&-icon {
-					width: $size-11;
-					height: $size-11;
-					margin-right: 10px;
+				&:not(:last-child) {
+					margin-bottom: 32px;
+
+					@include tablet() {
+						margin-bottom: 8px;
+					}
 				}
-			}
 
-			&-text {
-				font-size: $size-12;
+				&:nth-child(even) {
+					flex-direction: row-reverse;
 
-				@include tablet() {
-					font-size: $size-7;
-					line-height: 2.57;
+					@include tablet() {
+						flex-direction: row;
+					}
+				}
+
+				&-img {
+					width: 635px;
+					height: 320px;
+					object-fit: cover;
+
+					@include tablet() {
+						width: 390px;
+						height: 168px;
+					}
+				}
+
+				&-category {
+					@include mobile() {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+					}
+
+					&-icon {
+						width: 44px;
+						height: 44px;
+						margin-right: 10px;
+					}
+				}
+
+				&-text {
+					font-size: 48px;
+
+					@include tablet() {
+						font-size: 28px;
+						line-height: 2.57;
+					}
 				}
 			}
 		}
@@ -201,44 +180,30 @@
 		@include section-padding;
 
 		&-list {
-			display: flex;
-			justify-content: space-between;
-
 			@include mobile() {
-				flex-wrap: wrap;
-				gap: $size-4;
-			}
-		}
-
-		&-item {
-			position: relative;
-			flex-basis: 48%;
-
-			@include mobile() {
-				flex-basis: 100%;
+				gap: 16px;
 			}
 
-			&-img {
-				width: 100%;
-				height: 455px;
+			&-item {
+				position: relative;
+				flex-basis: 48%;
 
-				@include tablet() {
-					width: 330px;
-					height: 278px;
+				@include mobile() {
+					flex-basis: 100%;
 				}
-			}
 
-			&-text {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				font-size: $size-18;
-				white-space: nowrap;
+				&-text {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					font-size: 72px;
+					white-space: nowrap;
 
-				@include tablet() {
-					font-size: $size-8;
-					line-height: 25px;
+					@include tablet() {
+						font-size: 32px;
+						line-height: 25px;
+					}
 				}
 			}
 		}
@@ -248,78 +213,72 @@
 		@include section-padding;
 
 		&-list {
-			display: flex;
-			justify-content: space-between;
-
 			@include tablet() {
-				flex-wrap: wrap;
-				row-gap: $size-8;
+				row-gap: 32px;
 			}
 
 			@include mobile() {
-				row-gap: $size-4;
-			}
-		}
-
-		&-item {
-			height: 460px;
-			flex-basis: 23%;
-			border: 1px solid #dee2e6;
-			box-shadow: 0px 2px 6px #00000029;
-			border-radius: 4px;
-			overflow: hidden;
-			position: relative;
-
-			@include tablet() {
-				flex-basis: 48%;
+				row-gap: 16px;
 			}
 
-			@include mobile() {
-				flex-basis: 100%;
-			}
-
-			&-img {
-				width: 100%;
-				height: 256px;
-				object-fit: cover;
-			}
-
-			&-content {
-				padding: $size-4;
+			&-item {
+				height: 460px;
+				flex-basis: 23%;
+				border: 1px solid #dee2e6;
+				box-shadow: 0px 2px 6px #00000029;
+				border-radius: 4px;
+				overflow: hidden;
+				position: relative;
 
 				@include tablet() {
-					padding-left: $size-6;
-					padding-right: $size-6;
+					flex-basis: 48%;
 				}
-			}
 
-			&-title {
-				font-size: 14px;
-				font-weight: 500;
-				color: #212529;
-				margin-bottom: $size-2;
-			}
-
-			&-feedback {
-				color: #212529;
-				font-size: $size-4;
-				margin-bottom: $size-13;
-
-				@include tablet() {
-					margin-bottom: $size-19;
+				@include mobile() {
+					flex-basis: 100%;
 				}
-			}
 
-			&-date {
-				display: inline-block;
-				font-size: 14px;
-				color: #707070;
-				position: absolute;
-				bottom: $size-4;
-				left: $size-4;
+				&-content {
+					padding: 16px;
 
-				@include tablet() {
-					left: $size-6;
+					@include tablet() {
+						padding-left: 24px;
+						padding-right: 24px;
+					}
+				}
+
+				&-title {
+					font-size: 14px;
+					font-weight: 500;
+					color: #212529;
+					margin-bottom: 8px;
+				}
+
+				&-feedback {
+					color: #212529;
+					font-size: 16px;
+					margin-bottom: 52px;
+
+					@include tablet() {
+						margin-bottom: 76px;
+					}
+				}
+
+				&-img {
+					width: 100%;
+				}
+
+				&-date {
+					display: inline-block;
+					font-size: 14px;
+					color: #707070;
+					position: absolute;
+					bottom: 16px;
+					left: 16px;
+
+					@include tablet() {
+						left: 24px;
+					}
 				}
 			}
 		}
@@ -343,41 +302,36 @@
 		}
 
 		&-title {
-			margin-bottom: $size-6;
+			margin-bottom: 24px;
 		}
 
 		&-desc {
-			font-size: $size-5;
-			margin-bottom: $size-5;
+			font-size: 20px;
+			margin-bottom: 20px;
 
 			@include tablet() {
-				font-size: $size-4;
-				margin-bottom: $size-4;
+				font-size: 16px;
+				margin-bottom: 16px;
 			}
 
 			@include mobile() {
-				margin-bottom: $size-2;
+				margin-bottom: 8px;
 			}
 		}
 	}
 
 	&-form {
-		display: flex;
-		flex-direction: column;
-
 		&-box {
-			display: flex;
-			flex-direction: column;
-			margin-bottom: $size-4;
+			margin-bottom: 16px;
 
 			@include tablet() {
-				margin-bottom: $size-2;
+				margin-bottom: 8px;
 			}
 		}
 
 		&-label {
-			font-size: $size-4;
-			margin-bottom: $size-1;
+			font-size: 16px;
+			margin-bottom: 4px;
 
 			@include tablet() {
 				font-size: 14px;
@@ -387,7 +341,7 @@
 
 		&-input,
 		&-input-textarea {
-			font-size: $size-4;
+			font-size: 16px;
 			border: 1px solid #000;
 
 			@include tablet() {
@@ -401,56 +355,50 @@
 		}
 
 		&-input {
-			&-username {
-				padding: $size-3 $size-4 14px;
-
-				@include tablet() {
-					padding: $size-2 $size-3;
-				}
-			}
-
+			&-username,
 			&-phone,
-			&-email {
-				padding: 14px $size-4 15px;
+			&-email,
+			&-textarea {
+				padding: 12px 16px;
 
 				@include tablet() {
-					padding: 9px $size-3 $size-2;
+					padding: 8px 12px;
 				}
 			}
 
 			&-textarea {
 				resize: none;
 				height: 136px;
-				padding: $size-3 $size-4;
 
 				@include tablet() {
 					height: 100px;
-				}
-
-				@include mobile() {
-					padding: 9px $size-3;
 				}
 			}
 
 			&-checkbox {
 				display: inline-block;
-				width: $size-6;
-				height: $size-6;
-				margin-right: $size-1;
+				width: 24px;
+				height: 24px;
+				margin-right: 4px;
 
 				@include tablet() {
-					width: 17.63px;
-					height: 17.63px;
+					width: 20px;
+					height: 20px;
 				}
 			}
 		}
 
 		&-privacy {
-			display: flex;
-			margin-bottom: $size-10;
+			align-items: center;
+			margin-bottom: 40px;
+
+			@include tablet() {
+				align-items: start;
+				margin-bottom: 20px;
+			}
 
 			&-label {
-				font-size: $size-4;
+				font-size: 16px;
 
 				@include tablet() {
 					font-size: 14px;
@@ -460,9 +408,9 @@
 
 		&-btn {
 			border: 0;
-			padding: $size-4 143px;
+			padding: 16px 143px;
 			align-self: center;
-			font-size: $size-4;
+			font-size: 16px;
 			cursor: pointer;
 			transition: all 0.3s;
 
@@ -472,7 +420,7 @@
 			}
 
 			@include mobile() {
-				padding: $size-2 54.5px;
+				padding: 8px 54.5px;
 			}
 		}
 	}

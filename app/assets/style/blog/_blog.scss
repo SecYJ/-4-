@@ -4,6 +4,7 @@
 
 		&-item {
 			display: flex;
+			justify-content: space-between;
 			gap: 2%;
 
 			@include mobile() {
@@ -30,19 +31,18 @@
 				flex-basis: 100%;
 				margin-bottom: 8px;
 			}
-
-			img {
-				object-fit: cover;
-				height: 100%;
-			}
 		}
 
 		&-content {
 			flex-basis: 48%;
 			display: grid;
 			grid-template-columns: max-content 1fr;
-			grid-auto-rows: auto;
+			grid-template-rows: repeat(3, auto) 1fr;
 			align-content: start;
+
+			@include tablet() {
+				grid-template-rows: repeat(2, auto) 1fr;
+			}
 
 			@include mobile() {
 				flex-basis: 100%;
@@ -52,7 +52,6 @@
 		&-title {
 			color: $color-secondary;
 			font-size: 32px;
-			line-height: 63px;
 			grid-column: 1 / -1;
 
 			@include tablet() {
@@ -61,7 +60,6 @@
 
 			@include mobile() {
 				font-size: 16px;
-				line-height: 63px;
 			}
 
 			&-sub {
@@ -72,13 +70,11 @@
 
 				@include tablet() {
 					font-size: 16px;
-					line-height: 1.875;
-					margin-bottom: 32px;
+					margin-bottom: 0;
 				}
 
 				@include mobile() {
 					font-size: 14px;
-					line-height: 30px;
 				}
 			}
 		}
@@ -98,6 +94,10 @@
 		&-paragraph {
 			grid-row: 3 / 4;
 			grid-column: 1 / -1;
+
+			@include tablet() {
+				align-self: end;
+			}
 
 			@include mobile() {
 				display: none;
@@ -132,9 +132,15 @@
 				grid-row: 4 / 5;
 				grid-column: 2 / -1;
 				justify-self: end;
+				align-self: end;
+				transition: color 0.15s;
 
 				@include tablet() {
 					display: none;
+				}
+
+				&:hover {
+					color: lighten($color-secondary, 15%);
 				}
 			}
 

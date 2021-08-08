@@ -1,7 +1,6 @@
 .blog-details {
 	&-nav {
 		margin: 8px 0;
-		display: flex;
 
 		&-link {
 			font-size: 16px;
@@ -27,9 +26,6 @@
 	}
 
 	&-wrapper {
-		// display: flex;
-		// justify-content: space-between;
-		// flex-wrap: wrap;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 30px;
@@ -37,12 +33,9 @@
 		@include mobile() {
 			// flex-direction: column;
 		}
-
-		// justify-items: end;
 	}
 
 	&-content {
-		// flex-basis: 75%;
 		grid-column: span 2;
 
 		@include mobile() {
@@ -230,9 +223,6 @@
 				grid-column: span 3;
 				margin-bottom: 56px;
 			}
-			// justify-self: end;
-			// align-self: start;
-			// flex-basis: 20%;
 		}
 
 		&-title {
@@ -248,8 +238,6 @@
 		}
 
 		&-list {
-			flex-wrap: wrap;
-
 			&-item {
 				margin-right: 24px;
 				margin-bottom: 8px;
@@ -269,11 +257,9 @@
 	}
 
 	&-footer {
-		// width: 75%;
 		grid-column: span 2;
 
 		@include tablet() {
-			// width: 100%;
 			grid-column: span 3;
 		}
 
