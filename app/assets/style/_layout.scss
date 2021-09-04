@@ -18,8 +18,7 @@
 	&-logo {
 		@include mobile {
 			padding: 10px 0;
-			display: flex;
-			justify-content: center;
+			margin: 0 auto;
 		}
 	}
 
@@ -49,27 +48,6 @@
 			}
 
 			@include hover-underline;
-
-			// &::after {
-			// 	content: "";
-			// 	display: block;
-			// 	width: 0;
-			// 	height: 2px;
-			// 	background-color: #fff;
-			// 	position: absolute;
-			// 	bottom: -3px;
-			// 	transition: width 0.15s;
-			// }
-
-			// &:hover {
-			// 	&::after {
-			// 		width: 100%;
-
-			// 		@include mobile() {
-			// 			width: 0;
-			// 		}
-			// 	}
-			// }
 		}
 	}
 }

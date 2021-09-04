@@ -1,5 +1,4 @@
 @import "variables";
-@import "grid";
 @import "mixins";
 
 @import "reset";
@@ -9,17 +8,12 @@
 @import "utilities";
 
 @import "components/pagination";
-@import "components/blog-nav";
-@import "components/page-title";
 
-@import "index";
-
-@import "products/products";
-
-@import "locations/locate-list";
-@import "locations/locate";
-
-@import "faq/faq";
-
-@import "blog/blog";
-@import "blog/blog-details";
+@import "./pages/index";
+@import "./pages/products";
+@import "./pages/page-title";
+@import "./pages/locate";
+@import "./pages/locate-list";
+@import "./pages/blog";
+@import "./pages/blog-details";
+@import "./pages/faq";
